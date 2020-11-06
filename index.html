@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>JavaScript Quiz Format 1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="score">
+            <span id="user-score">0</span>>
+            <span id="total-score">/3</span>
+        </div>
+        <div class="content" id="question-area">
+         <div id="question-text">Is it looking good?</div>
+         <div class="option">
+             <button class="btn btn-option" id="true">True</button>
+             
+             <button class="btn btn-option" id="false">False</button>
+         </div>
+        </div>
+        <div class="controls">
+            <button class="btn btn-restart" id="restart">Restart</button>
+            <button class="btn btn-prev" id="prev">Prev</button>
+
+            <button class="btn btn-next" id="next">Next</button>
+
+            <button class="btn btn-submit" id="submit">Submit</button>
+
+
+        </div>
+    </div>
+
+<script>
+    const restartBtn=document.getElementById('restart');
+    const prevBtn=document.getElementById('prev');
+    const nextBtn=document.getElementById('next');
+    const trueBtn=document.getElementById('True');
+    const falseBtn=document.getElementById('False');
+    const underScore=document.getElementById('under-score');
+    const questionText=document.getElementById('question-text');
+
+
+    let currentQuestion=0;
+    var score=0;
+    let questions[
+        {
+            question:"Is coding ninza is a good platform?",
+            answers:[
+                {option:"for sure!", answer:true},
+                {option:"no, not at all",answer:false}
+                
+            ]
+        },
+
+        {
+            question:"What is better for success?",
+            answers:[
+                {option:"hard work", answer:true},
+                {option:"smart work",answer:false}
+            ]
+        },
+
+       {
+           question:"complete the phrase: time and _______wait for none?",
+           answer:[
+               {option:"Batman" ,answer:false},
+               {option:"Tide", answer:true}
+           ]
+       }
+
+    ]
+
+    restartBtn.addEventListener('click',restart);
+    prevBtn.addEventListener('click',prev);
+    nextBtn.addEventListener('click',next);
+    submitBtn.addEventListener('click',submit);
+
+
+    func beginQuiz()
+    {
+        currentQuestion=0;
+        questionText.innerHTML=questions[currentQuestion].question;
+        trueBtn.innerHTML=questions[currentQuestion].answer[0].option;
+        trueBtn.onclick=()=>{
+            
+        }
+    }
+</script>
+
+
+
+</body>
+</html>
